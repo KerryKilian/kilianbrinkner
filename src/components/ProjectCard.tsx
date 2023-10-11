@@ -36,7 +36,7 @@ export default function ProjectCard({title, shortDescription, longDescription, l
         <p className={`card__language rounded ${language}`}>{language}</p>
         <p>{shortDescription}</p>
         <figure className="card__figure">
-          <img src={images[0]?.image} alt={`image of ${title}`} className="card__image rounded" />
+          <img src={window.location.origin + "/" + images[0]?.image} alt={`image of ${title}`} className="card__image rounded" />
         </figure>
         
         
