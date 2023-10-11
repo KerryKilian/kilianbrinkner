@@ -1,0 +1,23 @@
+.page {
+  padding: 2%;
+}
+
+.page__github {
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.page__a, .page__a:hover {
+  color: var(--black-color);
+}
+
+.page__github {
+  scale: 1;
+  transition: scale 0.2s;
+}
+
+.page__github:hover, .page__a:active {
+  scale: 0.9;
+}

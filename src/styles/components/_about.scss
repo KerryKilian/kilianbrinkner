@@ -1,0 +1,16 @@
+@use "../_tools.scss" as tools;
+
+
+.about__row {
+    @include tools.flex(row, wrap, left, top)
+}
+
+.about__rowchild {
+    flex: 0.5 1 30em;
+    margin: var(--margin);
+}
+
+.about__rowchild + img {
+    max-width: 100%; /* Set a maximum width of 100% to make the image responsive */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
