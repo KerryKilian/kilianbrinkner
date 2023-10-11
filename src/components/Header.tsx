@@ -32,7 +32,7 @@ export default function Header() {
               {/* <a href="/timeline" className="navigation__link rounded">
                 Lebenslauf
               </a> */}
-              <Link to="/projects" className="navigation__link rounded">
+              <Link to="/timeline" className="navigation__link rounded">
               Lebenslauf
               </Link>
             </li>
