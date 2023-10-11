@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,19 +21,28 @@ export default function Header() {
           <ul className={`navigation__ul ${isOpen ? "open" : ""}`}>
             
             <li className="navigation__li rounded">
-              <a href="/" className="navigation__link rounded">
+              {/* <a href="/" className="navigation__link rounded">
                 Über mich
-              </a>
+              </a> */}
+              <Link to="/" className="navigation__link rounded">
+              Über mich
+              </Link>
             </li>
             <li className="navigation__li rounded">
-              <a href="/timeline" className="navigation__link rounded">
+              {/* <a href="/timeline" className="navigation__link rounded">
                 Lebenslauf
-              </a>
+              </a> */}
+              <Link to="/projects" className="navigation__link rounded">
+              Lebenslauf
+              </Link>
             </li>
             <li className="navigation__li rounded">
-              <a href="/projects" className="navigation__link rounded">
+              {/* <a href="/projects" className="navigation__link rounded">
                 Projekte
-              </a>
+              </a> */}
+              <Link to="/projects" className="navigation__link rounded">
+                Projekte
+              </Link>
             </li>
             
             
