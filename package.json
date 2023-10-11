@@ -1,6 +1,6 @@
 {
-  "homepage": "http://kerrykilian.github.io/kilianbrinkner-website",
-  "name": "kilianbrinkner-website",
+  "homepage": "https://kerrykilian.github.io/kilianbrinkner",
+  "name": "kilianbrinkner",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
