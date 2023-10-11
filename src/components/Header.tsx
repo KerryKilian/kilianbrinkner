@@ -20,18 +20,17 @@ export default function Header() {
           <ul className={`navigation__ul ${isOpen ? "open" : ""}`}>
             
             <li className="navigation__li rounded">
-              <a href={process.env.PUBLIC_URL + '/'} className="navigation__link rounded">
+              <a href="/" className="navigation__link rounded">
                 Über mich
               </a>
             </li>
             <li className="navigation__li rounded">
-              <a href={process.env.PUBLIC_URL + '/timeline'} className="navigation__link rounded">
+              <a href="/timeline" className="navigation__link rounded">
                 Lebenslauf
               </a>
             </li>
             <li className="navigation__li rounded">
-              <a href={process.env.PUBLIC_URL + '/projects'} className="navigation__link rounded">
-              {/* "/projects" */}
+              <a href="/projects" className="navigation__link rounded">
                 Projekte
               </a>
             </li>
