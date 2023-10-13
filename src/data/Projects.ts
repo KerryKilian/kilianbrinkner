@@ -1,3 +1,5 @@
+const path = "";
+
 export const projectsData = [
     {
         title: "SpyFinder",
@@ -11,15 +13,15 @@ export const projectsData = [
         github: "https://github.com/KerryKilian/SpyFinder",
         images: [
             {
-                image: "kilianbrinkner/images/SpyFinder/SpyFinder1.png",
+                image: "images/SpyFinder/SpyFinder1.png",
                 description: "Startseite",
             },
             {
-                image: "kilianbrinkner/images/SpyFinder/SpyFinder2.png",
+                image: "images/SpyFinder/SpyFinder2.png",
                 description: "Karte mit allen Kameras in der Nähe",
             },
             {
-                image: "kilianbrinkner/images/SpyFinder/SpyFinder3.png",
+                image: "images/SpyFinder/SpyFinder3.png",
                 description: "Benachrichtigungen",
             }
         ]
@@ -42,11 +44,11 @@ export const projectsData = [
         github: "https://github.com/KerryKilian/GeoContentProvider-Android/tree/bachelor",
         images: [
             {
-                image: "kilianbrinkner/images/GeoContentProvider/Geo1.png",
+                image: "images/GeoContentProvider/Geo1.png",
                 description: "Verarbeitung der Anfrage mit Bundle und der ContentProvider API",
             },
             {
-                image: "kilianbrinkner/images/GeoContentProvider/Geo2.png",
+                image: "images/GeoContentProvider/Geo2.png",
                 description: "Die Komplexität der App",
             },
         ]
@@ -60,19 +62,19 @@ export const projectsData = [
         database: "Firebase",
         images: [
             {
-                image: "kilianbrinkner/images/ChatApp/ChatApp1.png",
+                image: "images/ChatApp/ChatApp1.png",
                 description: "Alle Chats anzeigen lassen",
             },
             {
-                image: "kilianbrinkner/images/ChatApp/ChatApp2.png",
+                image: "images/ChatApp/ChatApp2.png",
                 description: "Im Chat mit anderen Usern",
             },
             {
-                image: "kilianbrinkner/images/ChatApp/ChatApp3.png",
+                image: "images/ChatApp/ChatApp3.png",
                 description: "Mein Profil",
             },
             {
-                image: "kilianbrinkner/images/ChatApp/ChatApp4.png",
+                image: "images/ChatApp/ChatApp4.png",
                 description: "Andere User finden",
             },
            
@@ -89,19 +91,19 @@ export const projectsData = [
         available: "https://schule-des-friedens-berlin.vercel.app/",
         images: [
             {
-                image: "kilianbrinkner/images/SDF-Web/SDF1.png",
+                image: "images/SDF-Web/SDF1.png",
                 description: "Ein Teil der Webseite mit Informationen über die Schule des Friedens",
             },
             {
-                image: "kilianbrinkner/images/SDF-Web/SDF2.png",
+                image: "images/SDF-Web/SDF2.png",
                 description: "News anzeigen lassen",
             },
             {
-                image: "kilianbrinkner/images/SDF-Web/SDF3.png",
+                image: "images/SDF-Web/SDF3.png",
                 description: "Login",
             },
             {
-                image: "kilianbrinkner/images/SDF-Web/SDF4.png",
+                image: "images/SDF-Web/SDF4.png",
                 description: "Nach dem Login kann man News hinzufügen.",
             },
         ]
@@ -114,19 +116,19 @@ export const projectsData = [
         github: "https://github.com/KerryKilian/calculator",
         images: [
             {
-                image: "kilianbrinkner/images/Calculator/Calculator1.png",
+                image: "images/Calculator/Calculator1.png",
                 description: "Addition",
             },
             {
-                image: "kilianbrinkner/images/Calculator/Calculator2.png",
+                image: "images/Calculator/Calculator2.png",
                 description: "Quadrat",
             },
             {
-                image: "kilianbrinkner/images/Calculator/Calculator3.png",
+                image: "images/Calculator/Calculator3.png",
                 description: "Wurzel",
             },
             {
-                image: "kilianbrinkner/images/Calculator/Calculator4.png",
+                image: "images/Calculator/Calculator4.png",
                 description: "Division",
             },
         ]
@@ -141,11 +143,11 @@ export const projectsData = [
         github: "https://github.com/KerryKilian/GPSTracker",
         images: [
             {
-                image: "kilianbrinkner/images/GPSTracker/GPSTracker1.png",
+                image: "images/GPSTracker/GPSTracker1.png",
                 description: "Bildschirm mit getrackter Kurve und Hilfslinien",
             },
             {
-                image: "kilianbrinkner/images/GPSTracker/GPSTracker2.png",
+                image: "images/GPSTracker/GPSTracker2.png",
                 description: "Dieselbe Route auf OpenStreetMap dargestellt",
             },
         ]
@@ -160,19 +162,19 @@ export const projectsData = [
         github: "https://github.com/KerryKilian/UniversitiesRoomDatabase",
         images: [
             {
-                image: "kilianbrinkner/images/RoomDB/RoomDB1.png",
+                image: "images/RoomDB/RoomDB1.png",
                 description: "Alle Universitäten aufgelistet",
             },
             {
-                image: "kilianbrinkner/images/RoomDB/RoomDB2.png",
+                image: "images/RoomDB/RoomDB2.png",
                 description: "Details einer Universität",
             },
             {
-                image: "kilianbrinkner/images/RoomDB/RoomDB3.png",
+                image: "images/RoomDB/RoomDB3.png",
                 description: "Universität hinzufügen",
             },
             {
-                image: "kilianbrinkner/images/RoomDB/RoomDB4.png",
+                image: "images/RoomDB/RoomDB4.png",
                 description: "Studenten hinzufügen",
             },
         ]
@@ -185,31 +187,31 @@ export const projectsData = [
         github: "https://github.com/KerryKilian/DigitalBusinessCards",
         images: [
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards1.png",
+                image: "images/DigitalBusinessCards/Cards1.png",
                 description: "Eigene Karte bearbeiten",
             },
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards2.png",
+                image: "images/DigitalBusinessCards/Cards2.png",
                 description: "Eigene Karte bearbeiten mit Bild URLs",
             },
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards3.png",
+                image: "images/DigitalBusinessCards/Cards3.png",
                 description: "Eigene Karte anzeigen lassen",
             },
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards4.png",
+                image: "images/DigitalBusinessCards/Cards4.png",
                 description: "Andere Karte scannen",
             },
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards5.png",
+                image: "images/DigitalBusinessCards/Cards5.png",
                 description: "Mit Kamera QR Code scannen",
             },
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards6.png",
+                image: "images/DigitalBusinessCards/Cards6.png",
                 description: "Liste von gespeicherten QR Codes",
             },
             {
-                image: "kilianbrinkner/images/DigitalBusinessCards/Cards7.png",
+                image: "images/DigitalBusinessCards/Cards7.png",
                 description: "Gespeicherte Karte anzeigen lassen",
             },
            
@@ -222,27 +224,27 @@ export const projectsData = [
         language: "React",
         images: [
             {
-                image: "kilianbrinkner/images/ReactShop/ReactShop1.png",
+                image: "images/ReactShop/ReactShop1.png",
                 description: "Anzeigen öffentlicher Listen",
             },
             {
-                image: "kilianbrinkner/images/ReactShop/ReactShop2.png",
+                image: "images/ReactShop/ReactShop2.png",
                 description: "Anzeigen der Items in der öffentlichen Liste",
             },
             {
-                image: "kilianbrinkner/images/ReactShop/ReactShop3.png",
+                image: "images/ReactShop/ReactShop3.png",
                 description: "Anzeige eines Items",
             },
             {
-                image: "kilianbrinkner/images/ReactShop/ReactShop4.png",
+                image: "images/ReactShop/ReactShop4.png",
                 description: "Neuen Store erstellen",
             },
             {
-                image: "kilianbrinkner/images/ReactShop/ReactShop5.png",
+                image: "images/ReactShop/ReactShop5.png",
                 description: "Nach Login sieht User auch private Stores",
             },
             {
-                image: "kilianbrinkner/images/ReactShop/ReactShop6.png",
+                image: "images/ReactShop/ReactShop6.png",
                 description: "Eingeloggte User können Stores editieren und löschen",
             },
            
