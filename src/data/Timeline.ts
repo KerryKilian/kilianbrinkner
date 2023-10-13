@@ -1,5 +1,3 @@
-const path = ""
-
 export const timelineData = [
   {
     title: "2013-2019",

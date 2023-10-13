@@ -1,5 +1,3 @@
-const path = "";
-
 export const projectsData = [
     {
         title: "SpyFinder",
