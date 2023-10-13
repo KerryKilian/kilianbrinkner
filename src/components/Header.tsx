@@ -11,7 +11,7 @@ export default function Header() {
         <>
         <BsList
           className="navigation__icon"
-          size={36}
+          size={42}
           onClick={toggleMenu}
         ></BsList>
         <nav

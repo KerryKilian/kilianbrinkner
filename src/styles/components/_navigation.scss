@@ -15,7 +15,12 @@
   background: var(--background-color-two);
   padding-left: var(--padding);
   padding-right: var(--padding);
-  width: 100%;
+  // width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
 }
 
 // a:-webkit-any-link {
@@ -54,6 +59,11 @@
   float: right;
   margin: var(--margin);
   color: var(--white-color);
+  z-index: 20;
+  position: sticky;
+  top: 0;
+  background-color: var(--black-color);
+  border-radius: var(--border-radius);
 }
 
 .navigation__link {
@@ -63,22 +73,65 @@
 
 @media (max-width: 1000px) {
   .isClosed.navigation {
-    display: none;
+    // display: none;
   }
 
   .navigation__icon {
     display: block;
+    z-index: 20;
   }
 
   .isOpen.navigation {
     padding: var(--padding);
   }
 
-  .isOpen.navigation > .navigation__ul {
+  // .isOpen.navigation > .navigation__ul {
+    .navigation__ul {
     display: grid;
     grid-template-columns: 1fr; /* One item per row */
     gap: calc(var(--margin) * 2); /* Adjust the gap between items as needed */
-    justify-items: right;
+    justify-items: center;
+    z-index: 10;
+  }
+
+
+  // animation when opening and closing the navigation
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+      z-index: 10;
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+      z-index: 10;
+    }
+  }
+
+  .navigation.isOpen {
+    animation: slideIn 0.5s ease-in-out ; /* Use forwards to keep the final state */
+  }
+  
+  .navigation.isClosed {
+    animation: slideOut 0.5s ease-in-out forwards; /* Use forwards to keep the final state */
+  }
+
+  // animation on button clicked
+  .navigation__icon {
+    scale: 1;
+  }
+
+  .navigation__icon:hover {
+    scale: 0.8;
+    transition: scale 0.2s;
   }
 }
 
@@ -91,3 +144,4 @@
 .navigation__li:hover {
   scale: 0.9;
 }
+

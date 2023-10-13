@@ -1,0 +1,33 @@
+.swiperslide {
+  margin-bottom: calc(var(--margin)*4);
+}
+
+.slide__cardTitle,
+.slide__cardSubtitle {
+  color: var(--text-color-one);
+}
+
+.line {
+  width: 120%;
+  height: 1px;
+  background-color: var(--white-color);
+  margin: var(--margin) -0;
+}
+
+.slide__imgcontainer {
+  max-width: 100%;
+}
+
+.slide__img {
+  width: auto;
+  height: calc(var(--img-height) / 2);
+}
+
+.slide__title {
+  color: var(--white-color);
+}
+
+// override theme color which is used by library to manage the color
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: var(--text-color-one);
+}
