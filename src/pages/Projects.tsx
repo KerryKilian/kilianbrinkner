@@ -1,7 +1,11 @@
 import Project from "../components/ProjectCard";
 import { projectsData } from "../data/Projects";
+import {useEffect} from "react";
 
 export default function Projects() {
+  useEffect(() => {
+    document.title = "Projekte";
+  }, []);
     return (
       <div className="page">
         <h1 className="h1">Kilian Aaron Brinkner</h1>

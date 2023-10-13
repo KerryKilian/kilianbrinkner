@@ -1,5 +1,10 @@
+import {useEffect} from "react";
 
 export default function Start() {
+  useEffect(() => {
+    document.title = "Kilian Aaron Brinkner";
+  }, []);
+
     return (
       <div className="page">
         <h1 className="h1">Kilian Aaron Brinkner</h1>

@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom";
 import { projectsData } from "../data/Projects";
+import {useEffect} from "react";
 
 function Project() {
   const { title } = useParams();
   const data = projectsData.find((project) => project.title === title);
+  useEffect(() => {
+    document.title = title ?? "Projekt";
+  }, []);
+
   return (
     <div className="page">
       <h1>{data?.title}</h1>
