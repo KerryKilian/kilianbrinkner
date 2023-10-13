@@ -7,6 +7,7 @@ function Project() {
   const data = projectsData.find((project) => project.title === title);
   useEffect(() => {
     document.title = title ?? "Projekt";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

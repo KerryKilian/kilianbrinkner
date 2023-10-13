@@ -3,6 +3,7 @@ import {useEffect} from "react";
 export default function Start() {
   useEffect(() => {
     document.title = "Kilian Aaron Brinkner";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
     return (

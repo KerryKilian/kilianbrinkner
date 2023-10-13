@@ -5,6 +5,7 @@ import {useEffect} from "react";
 export default function Projects() {
   useEffect(() => {
     document.title = "Projekte";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
     return (
       <div className="page">
