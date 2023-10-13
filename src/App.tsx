@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Timeline from "./pages/Timeline";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/timeline" element={<Timeline />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/projects/:title" element={<Project/>} />
+      <Route element={<NotFound/>} />
     </Routes>
     </ErrorBoundary>
   );
