@@ -11,7 +11,7 @@ export default function Start() {
           In diesem einem Jahr konnte ich viel dazulernen. Ich habe Module aus dem Bereich Web-, Software- und Appentwicklung belegt und fühle mich nun viel sicherer im Umgang mit der Programmierung. Nun starte
           ich meinen Master in Medieninformatik und hoffe, noch mehr in der Softwareentwicklung zu lernen.</p>
           <div className="about__rowchild">
-            <img className="rounded " src={`${window.location.origin}/kilianbrinkner/images/Kilian/Kilian1.jpg`} alt="Kilian Aaron Brinkner"></img>
+            <img className="rounded " src={`${window.location.origin}/images/Kilian/Kilian1.jpg`} alt="Kilian Aaron Brinkner"></img>
           </div>
         </div>
       </div>
