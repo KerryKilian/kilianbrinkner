@@ -1,63 +1,66 @@
 .cards__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 25em));
-    gap: 2em;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 25em));
+  gap: 2em;
+  justify-content: center;
 }
 
 .card {
-    margin: var(--margin);
-    padding: var(--padding);
-    background-color: var(--background-color-two);
+  margin: var(--margin);
+  padding: var(--padding);
+  background-color: var(--background-color-two);
 }
 
 .card__language {
-    padding: var(--padding);
+  padding: var(--padding);
 }
 
 .card__image {
-    max-height: 30em;
+  max-height: 30em;
 }
 
 .card__figure {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .Java {
-    background-color: var(--java-color);
+  background-color: var(--java-color);
 }
 
 .NextJS {
-    background-color: var(--nextjs-color);
+  background-color: var(--nextjs-color);
 }
 
 .Flutter {
-    background-color: var(--flutter-color);
+  background-color: var(--flutter-color);
 }
 
 .React {
-    background-color: var(--react-color);
+  background-color: var(--react-color);
+}
+
+.CSS {
+  background-color: var(--css-color);
 }
 
 //  Animation
 
-
 .card {
-    scale: 1;
-    transition: scale 0.2s, transform 1s, opacity 1s;
-    opacity: 0;
-    transform: translateY(10%);
+  scale: 1;
+  transition: scale 0.2s, transform 1s, opacity 1s;
+  opacity: 0;
+  transform: translateY(10%);
 }
 
 .card:hover {
-    scale: 0.95;
+  scale: 0.95;
 }
 
 .slide-in {
-    opacity: 1;
-    transform: translateY(0%);
-    transition-delay: 0s, 0.3s, 0.3s;
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0.3s, 0.3s;
 }
 
 $start: 1;

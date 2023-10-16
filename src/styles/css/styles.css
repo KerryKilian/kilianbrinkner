@@ -7,7 +7,8 @@
   --java-color: rgb(256, 124, 4);
   --flutter-color: rgb(4, 84, 156);
   --nextjs-color: rgb(0, 0, 0);
-  --react-color: rgb(80,212,252);
+  --react-color: rgb(80, 212, 252);
+  --css-color: rgb(231, 199, 16);
   --white-color: rgb(255, 255, 255);
   --black-color: rgb(0, 0, 0);
   --accept-color: rgb(30, 228, 40);
@@ -345,6 +346,10 @@ figure {
 
 .React {
   background-color: var(--react-color);
+}
+
+.CSS {
+  background-color: var(--css-color);
 }
 
 .card {
