@@ -290,4 +290,28 @@ export const projectsData = [
       },
     ],
   },
+  {
+    title: "OCR - Handwriting",
+    shortDescription:
+      "Uni-Projekt zur Erkennung von Handschrift",
+    longDescription:
+      "Hier geht es um OCR, bei dem ich per Hand geschriebene Wörter erkenne. Ich nutze dafür selbst trainierte Convolutional Neural Networks in Pytorch. Das Modell klassifiziert einzelne Buchstaben. Ein eigens implementierter Algorithmus erkennt alle Buchstaben in einem Bild und lässt sie von der selbst trainierten KI identifizieren. Die DOkumentation ist auf github im readme verfügbar.",
+    language: "Python",
+    github: "https://github.com/KerryKilian/ocr-handwriting",
+    images: [
+      {
+        image: "images/OCRHandwriting/ocr1.png",
+        description: "Logo und Such-Formular",
+      },
+      {
+        image: "images/OCRHandwriting/ocr2.png",
+        description: "Animation on hover mit Opacity und Translation",
+      },
+      {
+        image: "images/OCRHandwriting/ocr3.png",
+        description:
+          "Mit einem Loop wird das 'Angebot'-Schild nacheinander größer animiert",
+      }
+    ],
+  },
 ];
