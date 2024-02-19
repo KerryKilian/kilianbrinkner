@@ -301,16 +301,53 @@ export const projectsData = [
     images: [
       {
         image: "images/OCRHandwriting/ocr1.png",
-        description: "Logo und Such-Formular",
+        description: "Ergebnisse der Vorhersage auf Wörtern",
       },
       {
         image: "images/OCRHandwriting/ocr2.png",
-        description: "Animation on hover mit Opacity und Translation",
+        description: "Ergebnisse der Vorhersage auf Zeichen",
       },
       {
         image: "images/OCRHandwriting/ocr3.png",
         description:
-          "Mit einem Loop wird das 'Angebot'-Schild nacheinander größer animiert",
+          "Konfusionsmatrix der Zeichen",
+      }
+    ],
+  },
+  {
+    title: "News Webseite mit KI",
+    shortDescription:
+      "Personalisierte News Webseite, die Nachrichten mit KI kategorisiert",
+    longDescription:
+      "Eine mit Django geschriebene Seite, die Nachrichten anzeigt, die von der News Api kommen. Die Nachrichten werden mit einer selbst trainierten KI kategorisiert in verschiedene Kategorien wie Sport, General, Science usw. "+ 
+      "Außerdem werden dem User personalisierte Nachrichten angezeigt. Das heißt, wenn der User eine bestimmte Kategorie liest und diese ARtikel auch liked, dann werden ihm in Zukunft auch Artikel dieser Kategorie angezeigt. " +
+      "Außerdem gibt es noch weitere Unterteilungen innerhalb der Kategorie: Wenn der User nur BVB-ARtikel liest, dann werden auch bevorzugt BVB-Artikel angezeigt. Denn wenn einem User Sport-Artikel gefallen, heißt es nicht, dass der User auch alle Sportarten mag. " + 
+      "Gelöst wurde letzteres mit Bag of Words. Außerdem wurden einige Features eingebaut, wie schon gelesene Artikel, liken, disliken, kommentieren, suchen und Mehrsprachigkeit.",
+    language: "Django",
+    github: "https://github.com/KerryKilian/ocr-handwriting",
+    images: [
+      {
+        image: "images/NewsKI/newski1.png",
+        description: "Startseite mit deutschen Artikeln mit BVB Präferenz des Users",
+      },
+      {
+        image: "images/NewsKI/newski2.png",
+        description: "Startseite mit englischen Artikeln mit Sport Präferenz des Users",
+      },
+      {
+        image: "images/NewsKI/newski3.png",
+        description:
+          "Liken, disliken und kommentieren eines Artikels",
+      },
+      {
+        image: "images/NewsKI/newski4.png",
+        description:
+          "Suchen, Mehrsprachigkeit, gelesene Artikel und Logout",
+      },
+      {
+        image: "images/NewsKI/newski5.png",
+        description:
+          "Ergebnisse einer Suche nach 'America'",
       }
     ],
   },
