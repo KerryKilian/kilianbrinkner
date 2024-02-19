@@ -324,7 +324,7 @@ export const projectsData = [
       "Außerdem gibt es noch weitere Unterteilungen innerhalb der Kategorie: Wenn der User nur BVB-ARtikel liest, dann werden auch bevorzugt BVB-Artikel angezeigt. Denn wenn einem User Sport-Artikel gefallen, heißt es nicht, dass der User auch alle Sportarten mag. " + 
       "Gelöst wurde letzteres mit Bag of Words. Außerdem wurden einige Features eingebaut, wie schon gelesene Artikel, liken, disliken, kommentieren, suchen und Mehrsprachigkeit.",
     language: "Django",
-    github: "https://github.com/KerryKilian/ocr-handwriting",
+    github: "https://github.com/KerryKilian/AI-News-Django",
     images: [
       {
         image: "images/NewsKI/newski1.png",
