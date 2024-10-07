@@ -20,7 +20,7 @@ export const timelineData = [
     title: "2021",
     cardTitle: "Werkstudent für Lehre mit R",
     cardSubtitle: "Berliner Hochschule für Technik",
-    logo: "images/logos/r.png",
+    logo: "images/logos/bht.png",
     cardDetailedText:
       "Hier habe ich für meinen Professor Übungsaufgaben in der Sprache R erstellt. Es ging hauptsächlich darum, anderen Studierenden die Arbeit mit R näherzubringen.",
   },
@@ -33,7 +33,7 @@ export const timelineData = [
       "In meiner Bachelorarbeit habe ich eine Android-Anwendung entwickelt, die über einen Content Provider Geodaten für andere Apps zur Verfügung stellt. Ähnlich wie man Anfragen an einen Webserver stellt, können hier Anfragen an eine lokal verfügbare App gestellt werden. Es können Anfragen über allgemein zugängliche Geodaten als auch private Standortdaten des Users erhalten werden, sofern dieser dem zustimmt.",
   },
   {
-    title: "2022-2023",
+    title: "10/2022-09/2023",
     cardTitle: "Module im Bachelor Medieninformatik",
     cardSubtitle: "Berliner Hochschule für Technik",
     logo: "images/logos/bht.png",
@@ -41,19 +41,36 @@ export const timelineData = [
       "Um meinen Master Medienformatik anfangen zu dürfen, musste ich einige Module aus dem Bachelor belegen. Ich habe viele Anwendungen programmiert und konnte viel dazu lernen. Vor allem im Bereich Web- und Appentwicklung konnte ich mein Wissen enorm erweitern, da wir dort komplette Anwendungen programmiert haben.",
   },
   {
-    title: "2023-2024",
+    title: "05/2023-11/2023",
     cardTitle: "Werkstudent Programmierlehrer",
-    cardSubtitle: "Codary",
+    cardSubtitle: "Complori",
     logo: "images/logos/complori.webp",
     cardDetailedText:
-      "Bei Codary bringe ich Kindern und Jugendlichen das Programmieren bei. Dabei lehre ich Javascript und Python.",
+      "Bei Complori brachte ich Kindern und Jugendlichen das Programmieren bei. Dabei lehrte ich Javascript und Python.",
   },
   {
-    title: "ab 2023",
+    title: "ab 10/2023",
     cardTitle: "Master Medieninformatik",
     cardSubtitle: "Berliner Hochschule für Technik",
     logo: "images/logos/bht.png",
     cardDetailedText:
-      "Im Master belege ich Module, um mein Wissen in der Webentwicklung zu festigen und um neue Programmiersprachen wie Go zu erlernen.",
+      "Im Master belege ich Module, um mein Wissen in der Webentwicklung zu festigen und um neue Programmiersprachen oder Frameworks zu erlernen.",
+  },
+  
+  {
+    title: "12/2023 - 07/2024",
+    cardTitle: "Werkstudent Webentwicklung",
+    cardSubtitle: "Kiezbote",
+    logo: "images/logos/kiezbote.png",
+    cardDetailedText:
+      "Mit Bubble.io habe ich die internen Prozesse zum Anlegen von Aufträgen weiterentwickelt.",
+  },
+  {
+    title: "ab 08/2024",
+    cardTitle: "Werkstudent Webentwicklung",
+    cardSubtitle: "Materna",
+    logo: "images/logos/materna.png",
+    cardDetailedText:
+      "Ich arbeite im NINA Projekt in der Webentwicklung mit Javascript mit.",
   },
 ];

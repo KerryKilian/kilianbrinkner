@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --text-color-one: rgb(255, 226, 4);
   --text-color-two: rgb(255, 255, 255);
@@ -9,6 +10,8 @@
   --nextjs-color: rgb(0, 0, 0);
   --react-color: rgb(80, 212, 252);
   --css-color: rgb(231, 199, 16);
+  --python-color: rgb(226, 85, 56);
+  --django-color: rgb(226, 85, 56);
   --white-color: rgb(255, 255, 255);
   --black-color: rgb(0, 0, 0);
   --accept-color: rgb(30, 228, 40);
@@ -352,6 +355,14 @@ figure {
   background-color: var(--css-color);
 }
 
+.Python {
+  background-color: var(--python-color);
+}
+
+.Django {
+  background-color: var(--django-color);
+}
+
 .card {
   scale: 1;
   transition: scale 0.2s, transform 1s, opacity 1s;
@@ -409,6 +420,18 @@ figure {
   transition-delay: 0s, 3s, 0.3s;
 }
 
+.card:nth-child(11) {
+  transition-delay: 0s, 3.3s, 0.3s;
+}
+
+.card:nth-child(12) {
+  transition-delay: 0s, 3.6s, 0.3s;
+}
+
+.card:nth-child(13) {
+  transition-delay: 0s, 3.9s, 0.3s;
+}
+
 .images {
   display: flex;
   flex-flow: row wrap;
@@ -432,6 +455,8 @@ figure {
   border-radius: var(--border-radius);
   background-color: var(--white-color);
   color: var(--black-color);
+  border: none;
+  margin-right: var(--padding);
 }
 
 .page__a, .page__a:hover {
@@ -486,8 +511,12 @@ figure {
 }
 
 .slide__img {
-  width: auto;
-  height: calc(var(--img-height) / 2);
+  width: 300px; /* Feste Breite */
+  height: 300px; /* Feste Höhe */
+  -o-object-fit: contain;
+     object-fit: contain; /* Verhindert Verzerrung und skaliert das Bild proportional */
+  display: block;
+  margin: 0 auto; /* Zentriert das Bild */
 }
 
 .slide__title {

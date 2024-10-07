@@ -351,4 +351,51 @@ export const projectsData = [
       }
     ],
   },
+  {
+    title: "Öffentliche Webseite für globales Treffen",
+    shortDescription:
+      "Die Webseite diente bei einem globalen Treffen zum Einschreiben in Gruppen und Erhalten von Informationen auf mehreren Sprachen.",
+    longDescription:
+      "Die Webseite wurde mit NextJS und Typescript entwickelt und wurde von mehreren hundert Personen genutzt. Damit konnten sich die Teilnehmer des Treffens in Stadtführungen einschreiben (und austragen) und Informationen "+
+      "zum Programm etc einholen. Die Daten sind in der Mongodb gespeichert. Außerdem können mehrere Sprachen einstellt werden. Ich habe versucht, möglichst Animationen einzubauen und sauberes CSS zu schreiben, jedoch " +
+      "musste die Seite mit enormen Zeitdruck erstellt werden, weshalb hier und da unschöne CSS Designs auftreten. Auch wurde hier bewusst auf eine Bestätigungsemail beim Eintragen in eine Tour verzichtet.",
+    language: "NextJS",
+    github: "https://github.com/KerryKilian/yfp_berlin_2024_public",
+    available: "https://yfp-berlin-2024.vercel.app/de",
+    images: [
+      {
+        image: "images/yfp_berlin_2024/yfp1.png",
+        description: "Startseite mit Programminhalten",
+      },
+      {
+        image: "images/yfp_berlin_2024/yfp2.png",
+        description: "Hier sind die Touren mit Beschreibungen und Anzahl einsehbar",
+      },
+      {
+        image: "images/yfp_berlin_2024/yfp3.png",
+        description:
+          "Hier kann sich eingetragen werden",
+      },
+      {
+        image: "images/yfp_berlin_2024/yfp4.png",
+        description:
+          "Hier können Teilnehmer sich selbst suchen und ggf aus einer Tour austragen",
+      },
+      {
+        image: "images/yfp_berlin_2024/yfp5.png",
+        description:
+          "Teilnehmer können mit dieser Seite selbst zu den Sehenswürdigkeiten laufen und dort Informationen dazu erhalten",
+      },
+      {
+        image: "images/yfp_berlin_2024/yfp6.png",
+        description:
+          "Dateien stehen hier bereit",
+      },
+      {
+        image: "images/yfp_berlin_2024/yfp7.png",
+        description:
+          "Folgende Sprachen können ausgewählt werden",
+      }
+    ],
+  },
 ];

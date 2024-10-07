@@ -18,9 +18,17 @@
   max-width: 100%;
 }
 
+// .slide__img {
+//   width: auto;
+//   height: calc(var(--img-height) / 2);
+// }
+
 .slide__img {
-  width: auto;
-  height: calc(var(--img-height) / 2);
+  width: 300px; /* Feste Breite */
+  height: 300px; /* Feste Höhe */
+  object-fit: contain; /* Verhindert Verzerrung und skaliert das Bild proportional */
+  display: block;
+  margin: 0 auto; /* Zentriert das Bild */
 }
 
 .slide__title {

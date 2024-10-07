@@ -20,6 +20,11 @@ function Project() {
         Github
         </a>
       </button> : <></>}
+      {data?.available ? <button className="page__github">
+        <a className="page__a" href={data?.available}>
+        Webseite
+        </a>
+      </button> : <></>}
       
       <div className="images">
         {data?.images.map((image) => (
