@@ -66,7 +66,7 @@ export const timelineData = [
       "Mit Bubble.io habe ich die internen Prozesse zum Anlegen von Aufträgen weiterentwickelt.",
   },
   {
-    title: "08/2024 - 07-20254",
+    title: "08/2024 - 07-2025",
     cardTitle: "Werkstudent Webentwicklung",
     cardSubtitle: "Materna",
     logo: "images/logos/materna.png",
