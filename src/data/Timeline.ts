@@ -66,11 +66,11 @@ export const timelineData = [
       "Mit Bubble.io habe ich die internen Prozesse zum Anlegen von Aufträgen weiterentwickelt.",
   },
   {
-    title: "ab 08/2024",
+    title: "08/2024 - 07-20254",
     cardTitle: "Werkstudent Webentwicklung",
     cardSubtitle: "Materna",
     logo: "images/logos/materna.png",
     cardDetailedText:
-      "Ich arbeite im NINA Projekt in der Webentwicklung mit Javascript mit.",
+      "Hier habe ich im NINA-Projekt an der Webseite mit Javascript gearbeitet. Meine Hauptaufgaben waren die MItarbeit an der Kartendarstellung sowie das Erstellen von Server Side gerenderten Seiten mit Kotlin. Dabei konnte ich auch Jenkins und Nginx kennenlernen.",
   },
 ];
