@@ -1,11 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
 import { timelineData } from "../data/Timeline";
 import { Slide } from "./Slide";
-import 'swiper/swiper-bundle.css'; // Import Swiper styles
 
 
 export const Slider = () => {
@@ -51,7 +47,7 @@ export const Slider = () => {
         <Swiper {...settings}>
           {timelineData.map((object) => {
             return (
-              <SwiperSlide className="swiperslide">
+              <SwiperSlide className="swiperslide" key={object.title}>
                 <Slide
                   title={object.title}
                   cardTitle={object.cardTitle}

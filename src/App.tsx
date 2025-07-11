@@ -8,6 +8,8 @@ import Timeline from "./pages/Timeline";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
 import NotFound from "./components/NotFound";
+import "swiper/css";
+import "swiper/css/pagination";
 
 function App() {
   return (

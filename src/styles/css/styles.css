@@ -5,7 +5,7 @@
   --text-color-three: rgb(0, 124, 219);
   --background-color-one: rgb(33, 33, 33);
   --background-color-two: rgb(58, 58, 58);
-  --java-color: rgb(256, 124, 4);
+  --java-color: rgb(255, 124, 4);
   --flutter-color: rgb(4, 84, 156);
   --nextjs-color: rgb(0, 0, 0);
   --react-color: rgb(80, 212, 252);
@@ -430,6 +430,10 @@ figure {
 
 .card:nth-child(13) {
   transition-delay: 0s, 3.9s, 0.3s;
+}
+
+.card:nth-child(14) {
+  transition-delay: 0s, 4.2s, 0.3s;
 }
 
 .images {

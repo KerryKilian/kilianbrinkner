@@ -398,4 +398,29 @@ export const projectsData = [
       }
     ],
   },
+  {
+    title: "Einkaufslisten-App",
+    shortDescription:
+      "Eine kleine App zum Erstellen und Bearbeiten von Einkaufslisten",
+    longDescription:
+      "Diese App wurde mit Flutter entwickelt und arbeitet intern mit einer Datenbank, um Einträge zu speichern. Ein Eintrag (zB 1 Packung Kartoffeln) wird automatisch mit dem richtigen (Kartoffel-)Bild vernetzt. In der Listenansicht kann man alle Einträge sehen, beaerbeiten und löschen. "+
+      "Man kann Einträge auf deutsch, englisch und französisch machen, jedesmal wird das richtige Bild gefunden. ZB kann ich 'Apple' eingeben, dann wird auch ein Apfel-Bild angezeigt.",
+    language: "Flutter",
+    github: "https://github.com/KerryKilian/shoplist_flutter",
+    images: [
+      {
+        image: "images/Einkaufsliste/Hauptansicht.png",
+        description: "Startseite mit Einkaufsliste",
+      },
+      {
+        image: "images/Einkaufsliste/Erstellen.png",
+        description: "Erstellen eines neuen Eintrags",
+      },
+      {
+        image: "images/Einkaufsliste/Bearbeiten.png",
+        description:
+          "Bearbeiten eines Eintrags",
+      },
+    ],
+  },
 ];
