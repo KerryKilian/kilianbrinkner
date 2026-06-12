@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "about": "~/about",
+    "projects": "~/projects",
+    "timeline": "~/timeline"
+  },
+  "home": {
+    "comment": "// software developer · Berlin",
+    "subtitle": "Master Media Informatics · Android · Web · Machine Learning",
+    "ctaProjects": "View Projects",
+    "ctaTimeline": "Timeline",
+    "scroll": "scroll",
+    "aboutLabel": "about me",
+    "aboutHeading": "Developer with\nPassion",
+    "aboutText": "I am 23 years old and live in Berlin. I hold a Bachelor's degree in Geoinformation with a focus on Geoinformatics. During my studies I discovered my passion for programming, especially app and web development. Since winter 2023 I have been studying for my Master's in Media Informatics at the Berliner Hochschule für Technik."
+  },
+  "projects": {
+    "label": "projects",
+    "heading": "My Projects",
+    "subtitle": "{{count}} Projects",
+    "subtitle_one": "{{count}} Project",
+    "subtitle_other": "{{count}} Projects",
+    "viewProject": "$ ./view-project"
+  },
+  "timeline": {
+    "label": "timeline",
+    "heading": "Career",
+    "subtitle": "Education · Studies · Work Experience"
+  },
+  "project": {
+    "breadcrumb": "~/projects",
+    "descriptionLabel": "description",
+    "screenshotsLabel": "screenshots",
+    "github": "GitHub →",
+    "website": "Website →"
+  }
+}

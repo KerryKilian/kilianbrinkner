@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Preview — Project Detail</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #060612; --bg2: #0d0d20; --bg3: #0f0f24;
+    --border: #1a1a3e; --accent: #00ffaa;
+    --accent-glow: rgba(0,255,170,0.1);
+    --text: #e8e8ff; --text2: #8888aa; --text3: #4a4a6a;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'Outfit', sans-serif;
+  }
+
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); }
+
+  header {
+    position: sticky; top: 0; height: 56px;
+    background: rgba(6,6,18,0.95); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px; z-index: 100;
+  }
+  .logo { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 2px; }
+  .logo span { color: var(--text3); }
+  nav { display: flex; align-items: center; gap: 28px; }
+  nav a { font-family: var(--mono); font-size: 11px; color: var(--text3); text-decoration: none; letter-spacing: 1px; }
+  nav a.active { color: var(--text); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+  .lang-toggle { font-family: var(--mono); font-size: 10px; border: 1px solid var(--border); color: var(--text3); padding: 4px 10px; letter-spacing: 2px; cursor: pointer; background: transparent; }
+
+  .page { padding: 60px 40px; max-width: 900px; margin: 0 auto; }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    font-family: var(--mono); font-size: 11px; color: var(--text3);
+    letter-spacing: 1px; margin-bottom: 32px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .breadcrumb a { color: var(--text3); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb-sep { color: var(--border); }
+  .breadcrumb-current { color: var(--text2); }
+
+  /* Hero */
+  .project-hero {
+    margin-bottom: 48px;
+  }
+
+  .lang-badge {
+    display: inline-block;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 1px;
+    padding: 4px 10px; margin-bottom: 16px;
+    border-left: 2px solid #ff8040; color: #ff8040;
+    background: rgba(255,128,64,0.08);
+  }
+
+  .project-title {
+    font-family: var(--mono); font-size: 42px; font-weight: 700;
+    color: var(--text); letter-spacing: -1.5px; line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .project-short {
+    font-family: var(--sans); font-size: 16px; color: var(--text2);
+    font-weight: 300; line-height: 1.7; max-width: 60ch;
+    margin-bottom: 28px;
+  }
+
+  .project-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+
+  .btn-primary {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 2px;
+    color: var(--bg); background: var(--accent);
+    padding: 11px 24px; cursor: pointer; border: none;
+    text-transform: uppercase; text-decoration: none; display: inline-block;
+  }
+  .btn-secondary {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 2px;
+    color: var(--text2); background: transparent;
+    padding: 11px 24px; cursor: pointer; border: 1px solid var(--border);
+    text-transform: uppercase; text-decoration: none; display: inline-block;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Description */
+  .section-label {
+    font-family: var(--mono); font-size: 10px; color: var(--accent);
+    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .section-label::before { content: '// '; color: var(--text3); }
+
+  .project-desc {
+    font-family: var(--sans); font-size: 15px; color: var(--text2);
+    line-height: 1.9; font-weight: 300; max-width: 68ch;
+    margin-bottom: 56px;
+    border-left: 2px solid var(--border);
+    padding-left: 24px;
+  }
+
+  /* Image gallery */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .gallery-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .gallery-item:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .gallery-img {
+    width: 100%; display: block;
+    background: var(--bg3);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+  }
+  .gallery-img:hover { opacity: 1; }
+
+  .gallery-img-placeholder {
+    width: 100%; aspect-ratio: 16/9;
+    background: var(--bg3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 10px; color: var(--text3);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .gallery-caption {
+    font-family: var(--mono); font-size: 10px; color: var(--text3);
+    padding: 10px 14px; letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>&gt; </span>kilian.dev</div>
+  <nav>
+    <a href="#">~/über-mich</a>
+    <a href="#" class="active">~/projekte</a>
+    <a href="#">~/lebenslauf</a>
+    <button class="lang-toggle">DE | EN</button>
+  </nav>
+</header>
+
+<div class="page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="#">~/projekte</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">SpyFinder</span>
+  </div>
+
+  <!-- Hero -->
+  <div class="project-hero">
+    <span class="lang-badge">Java (Android Studio)</span>
+    <h1 class="project-title">SpyFinder</h1>
+    <p class="project-short">Eine Android-App, die Warnungen gibt, wenn man sich in der Nähe einer Überwachungskamera befindet — mit Google Geofencing und OpenStreetMap-Daten.</p>
+    <div class="project-actions">
+      <a href="https://github.com/KerryKilian/SpyFinder" class="btn-primary">GitHub →</a>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="section-label">beschreibung</p>
+  <p class="project-desc">
+    Die App nutzt das Geofencing von Google, um dauerhaft zu prüfen, ob der User sich in der Nähe einer Überwachungskamera befindet. Die Daten kommen von OpenStreetMap — zunächst muss die Region ausgewählt werden, da die Standorte der Kameras statisch gespeichert sind. In der Kartenansicht werden alle Kameras in der Region oder nur die in der Nähe befindlichen angezeigt.
+  </p>
+
+  <!-- Gallery -->
+  <p class="section-label">screenshots</p>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <div class="gallery-img-placeholder" style="aspect-ratio:21/9;">[ SpyFinder1.png — Startseite ]</div>
+      <div class="gallery-caption">Startseite</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img-placeholder">[ SpyFinder2.png ]</div>
+      <div class="gallery-caption">Karte mit allen Kameras in der Nähe</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-img-placeholder">[ SpyFinder3.png ]</div>
+      <div class="gallery-caption">Benachrichtigungen</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

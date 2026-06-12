@@ -1,18 +1,22 @@
-import { Slider } from "../components/Slider";
-import {useEffect} from "react";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { VerticalTimeline } from "../components/VerticalTimeline";
 
 export default function Timeline() {
+  const { t } = useTranslation();
+
   useEffect(() => {
-    document.title = "Lebenslauf";
-    //eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    document.title = t("timeline.heading");
+  }, [t]);
 
   return (
     <div className="page">
-      <h1 className="h1">Kilian Aaron Brinkner</h1>
-      <h2 className="h2">Lebenslauf</h2>
-      
-      <Slider></Slider>
+      <div className="page-header">
+        <p className="section-label">{t("timeline.label")}</p>
+        <h1 className="page-header__title">{t("timeline.heading")}</h1>
+        <p className="page-header__subtitle">{t("timeline.subtitle")}</p>
+      </div>
+      <VerticalTimeline />
     </div>
   );
 }

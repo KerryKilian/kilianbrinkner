@@ -1,16 +1,220 @@
-@use "../_tools.scss" as tools;
-
-
-.about__row {
-    @include tools.flex(row, wrap, left, top)
+// Override .page padding for home (hero needs full viewport height)
+.page--home {
+  padding: 0;
+  max-width: 100%;
 }
 
-.about__rowchild {
-    flex: 0.5 1 30em;
-    margin: var(--margin);
+// ---- Hero ----
+
+.hero {
+  min-height: 100vh;
+  padding: 120px var(--page-padding) 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  // Grid background
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  // Radial glow
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(0, 255, 170, 0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
 }
 
-.about__rowchild + img {
-    max-width: 100%; /* Set a maximum width of 100% to make the image responsive */
-    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+.hero__inner {
+  position: relative;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.hero__comment {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.hero__name {
+  font-family: var(--font-mono);
+  font-size: clamp(42px, 7vw, 80px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.hero__name-accent {
+  color: var(--accent);
+}
+
+.hero__subtitle {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--text2);
+  font-weight: 300;
+  margin: 20px 0 40px;
+  letter-spacing: 0.5px;
+}
+
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.hero__tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  letter-spacing: 1px;
+
+  &--highlight {
+    color: var(--accent);
+    border-color: rgba(0, 255, 170, 0.3);
+    background: var(--accent-glow);
+  }
+}
+
+.hero__cta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: var(--page-padding);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+.hero__scroll-line {
+  width: 40px;
+  height: 1px;
+  background: var(--text3);
+  display: block;
+}
+
+.hero__scroll-text {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 2px;
+}
+
+// ---- About section ----
+
+.about {
+  padding: 100px var(--page-padding);
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.about__heading {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  white-space: pre-line;
+}
+
+.about__body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 55ch;
+}
+
+.about__photo {
+  position: relative;
+}
+
+.about__frame {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-glow) 0%, transparent 60%);
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about__frame-accent {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px;
+  }
+
+  .hero__scroll {
+    left: 20px;
+  }
+
+  .about {
+    padding: 60px 20px;
+  }
 }

@@ -1,42 +1,28 @@
 :root {
-  --text-color-one: rgb(255, 226, 4);
-  --text-color-two: rgb(255, 255, 255);
-  --text-color-three: rgb(0, 124, 219);
-  --background-color-one: rgb(33, 33, 33);
-  --background-color-two: rgb(58, 58, 58);
+  // Background layers
+  --bg:          #060612;
+  --bg2:         #0d0d20;
+  --bg3:         #0f0f24;
 
-  --java-color: rgb(255, 124, 4);
-  --flutter-color: rgb(4, 84, 156);
-  --nextjs-color: rgb(0, 0, 0);
-  --react-color: rgb(80, 212, 252);
-  --css-color: rgb(231, 199, 16);
-  --python-color: rgb(226, 85, 56);
-  --django-color: rgb(226, 85, 56);
+  // Borders
+  --border:      #1a1a3e;
 
-  --white-color: rgb(255, 255, 255);
-  --black-color: rgb(0, 0, 0);
-  --accept-color: rgb(30, 228, 40);
-  --decline-color: rgb(241, 79, 79);
+  // Accent
+  --accent:      #00ffaa;
+  --accent-glow: rgba(0, 255, 170, 0.10);
 
-  --font-family: "Trebuchet MS", sans-serif;
+  // Text
+  --text:        #e8e8ff;
+  --text2:       #8888aa;
+  --text3:       #4a4a6a;
 
-  --basic-font-size: 18px;
-  --fontsize-h1: 3rem;
-  --fontsize-h2: 1.8rem;
-  --fontsize-h3: 1.3rem;
-  --fontsize-p: 1.1rem;
-  --fontsize-form: 1.1rem;
-  --fontsize-table: 1.1rem;
-  --fontsize-button: 1.1rem;
-  --fontsize-navigation: 1.3rem;
+  // Typography
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Outfit', sans-serif;
 
-  --max-text-length: 60ch;
-  --margin-viewport: 3vh;
-  --border-radius: 0.5rem;
-  --margin: 0.5rem;
-  --padding: 0.5rem;
-  --max-button-height: 3rem;
-  --max-button-width: 10rem;
-  --img-height: 20rem;
-  --img-width: 30rem;
+  // Layout
+  --header-height:  56px;
+  --page-padding:   40px;
+  --page-max-width: 1200px;
+  --border-radius:  0.5rem;
 }

@@ -1,25 +1,67 @@
-.page {
-  padding: 2%;
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin-bottom: 32px;
 }
 
-.page__github {
-  padding: var(--padding);
-  border-radius: var(--border-radius);
-  background-color: var(--white-color);
-  color: var(--black-color);
-  border: none;
-  margin-right: var(--padding);
+.breadcrumb__link {
+  color: var(--text3);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover { color: var(--accent); }
 }
 
-.page__a, .page__a:hover {
-  color: var(--black-color);
+.breadcrumb__sep {
+  color: var(--border);
 }
 
-.page__github {
-  scale: 1;
-  transition: scale 0.2s;
+.breadcrumb__current {
+  color: var(--text2);
 }
 
-.page__github:hover, .page__a:active {
-  scale: 0.9;
+.project-detail {
+  max-width: 900px;
+}
+
+.project-detail__title {
+  font-family: var(--font-mono);
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin: 16px 0 12px;
+}
+
+.project-detail__short {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--text2);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 60ch;
+  margin-bottom: 28px;
+}
+
+.project-detail__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.project-detail__desc {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.9;
+  font-weight: 300;
+  max-width: 68ch;
+  border-left: 2px solid var(--border);
+  padding-left: 24px;
+  margin-bottom: 56px;
 }

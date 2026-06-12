@@ -1,0 +1,119 @@
+<h2>Which navigation layout?</h2>
+<p class="subtitle">This shapes the overall structure of every page.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="sidebar" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#060612;display:flex;min-height:200px;font-family:'Helvetica Neue',sans-serif;border:1px solid #1a1a3e;">
+        <!-- Sidebar -->
+        <div style="width:110px;border-right:1px solid #1a1a3e;padding:16px 12px;display:flex;flex-direction:column;gap:20px;">
+          <div>
+            <p style="color:#00ffaa;font-size:8px;letter-spacing:2px;margin:0;font-family:monospace;">&gt; KB</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:2px;height:12px;background:#00ffaa;"></div>
+              <span style="color:#e8e8ff;font-size:9px;letter-spacing:1px;">~/about</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:2px;height:12px;background:transparent;"></div>
+              <span style="color:#4a4a6a;font-size:9px;letter-spacing:1px;">~/work</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:2px;height:12px;background:transparent;"></div>
+              <span style="color:#4a4a6a;font-size:9px;letter-spacing:1px;">~/timeline</span>
+            </div>
+          </div>
+          <div style="margin-top:auto;">
+            <span style="border:1px solid #1a1a3e;color:#4a4a6a;font-size:7px;padding:3px 6px;font-family:monospace;">DE | EN</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div style="flex:1;padding:16px;">
+          <div style="height:8px;width:60%;background:#1a1a3e;border-radius:2px;margin-bottom:8px;"></div>
+          <div style="height:6px;width:40%;background:#12122a;border-radius:2px;margin-bottom:16px;"></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <div style="height:60px;width:70px;background:#0d0d20;border:1px solid #1a1a3e;border-radius:3px;"></div>
+            <div style="height:60px;width:70px;background:#0d0d20;border:1px solid #1a1a3e;border-radius:3px;"></div>
+            <div style="height:60px;width:70px;background:#0d0d20;border:1px solid #1a1a3e;border-radius:3px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Fixed Left Sidebar</h3>
+      <p>Always-visible sidebar with nav links and language toggle. Content area to the right. Classic developer portfolio feel — nothing hidden.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="topbar" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#060612;min-height:200px;font-family:'Helvetica Neue',sans-serif;border:1px solid #1a1a3e;display:flex;flex-direction:column;">
+        <!-- Top bar -->
+        <div style="border-bottom:1px solid #1a1a3e;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="color:#00ffaa;font-size:9px;letter-spacing:2px;font-family:monospace;">&gt; kilian.dev</span>
+          <div style="display:flex;gap:16px;align-items:center;">
+            <span style="color:#e8e8ff;font-size:8px;border-bottom:1px solid #00ffaa;padding-bottom:2px;">~/about</span>
+            <span style="color:#4a4a6a;font-size:8px;">~/work</span>
+            <span style="color:#4a4a6a;font-size:8px;">~/timeline</span>
+            <span style="border:1px solid #1a1a3e;color:#4a4a6a;font-size:7px;padding:2px 6px;font-family:monospace;">DE | EN</span>
+          </div>
+        </div>
+        <!-- Content -->
+        <div style="flex:1;padding:16px;">
+          <div style="height:10px;width:55%;background:#1a1a3e;border-radius:2px;margin-bottom:8px;"></div>
+          <div style="height:7px;width:35%;background:#12122a;border-radius:2px;margin-bottom:20px;"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+            <div style="height:50px;background:#0d0d20;border:1px solid #1a1a3e;border-radius:3px;"></div>
+            <div style="height:50px;background:#0d0d20;border:1px solid #1a1a3e;border-radius:3px;"></div>
+            <div style="height:50px;background:#0d0d20;border:1px solid #1a1a3e;border-radius:3px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Sticky Top Bar</h3>
+      <p>Fixed header bar with logo left, nav links + language toggle right. Familiar, works great on all screen sizes. Collapses to hamburger on mobile.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="fullscreen" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#060612;min-height:200px;font-family:'Helvetica Neue',sans-serif;border:1px solid #1a1a3e;display:flex;flex-direction:column;position:relative;">
+        <!-- Corner menu icon -->
+        <div style="position:absolute;top:10px;right:12px;display:flex;flex-direction:column;gap:3px;z-index:2;">
+          <div style="width:18px;height:1px;background:#00ffaa;"></div>
+          <div style="width:12px;height:1px;background:#00ffaa;"></div>
+          <div style="width:18px;height:1px;background:#00ffaa;"></div>
+        </div>
+        <!-- Corner logo -->
+        <div style="position:absolute;top:10px;left:12px;">
+          <span style="color:#00ffaa;font-size:8px;letter-spacing:2px;font-family:monospace;">&gt; KB</span>
+        </div>
+        <!-- Hero content centered -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:30px 16px 16px;">
+          <p style="color:#4a4a6a;font-size:8px;font-family:monospace;margin:0 0 4px;">// developer</p>
+          <div style="font-size:22px;color:#e8e8ff;font-weight:700;line-height:1.1;margin-bottom:10px;">Kilian<br><span style="color:#00ffaa;">Brinkner</span></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="color:#4a4a6a;font-size:8px;font-family:monospace;">Android</span>
+            <span style="color:#4a4a6a;font-size:8px;font-family:monospace;">·</span>
+            <span style="color:#4a4a6a;font-size:8px;font-family:monospace;">Web</span>
+            <span style="color:#4a4a6a;font-size:8px;font-family:monospace;">·</span>
+            <span style="color:#4a4a6a;font-size:8px;font-family:monospace;">ML</span>
+          </div>
+        </div>
+        <!-- Bottom scroll hint -->
+        <div style="padding:8px 16px;border-top:1px solid #0d0d20;display:flex;justify-content:space-between;align-items:center;">
+          <span style="color:#1a1a3e;font-size:7px;font-family:monospace;">scroll ↓</span>
+          <span style="border:1px solid #1a1a3e;color:#4a4a6a;font-size:7px;padding:2px 6px;font-family:monospace;">DE | EN</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Minimal Corner + Fullscreen Menu</h3>
+      <p>Logo and hamburger in corners only. Clicking opens a dramatic fullscreen overlay menu. Maximalist drama, but more complex UX and harder to navigate quickly.</p>
+    </div>
+  </div>
+
+</div>

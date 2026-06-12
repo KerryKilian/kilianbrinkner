@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "about": "~/über-mich",
+    "projects": "~/projekte",
+    "timeline": "~/lebenslauf"
+  },
+  "home": {
+    "comment": "// software developer · Berlin",
+    "subtitle": "Master Medieninformatik · Android · Web · Machine Learning",
+    "ctaProjects": "Projekte ansehen",
+    "ctaTimeline": "Lebenslauf",
+    "scroll": "scroll",
+    "aboutLabel": "über mich",
+    "aboutHeading": "Entwickler mit\nLeidenschaft",
+    "aboutText": "Ich bin 23 Jahre alt und lebe in Berlin. Ich habe bereits einen Bachelor in Geoinformation mit dem Schwerpunkt Geoinformatik. Während des Studiums habe ich gemerkt, dass mir die Programmierung viel Spaß macht. Mein Fokus lag schon immer auf der App- und Webentwicklung. Ab Winter 2022 habe ich Module aus dem Bachelor Medieninformatik belegt, damit ich nun seit Winter 2023 meinen Master in Medieninformatik belegen kann."
+  },
+  "projects": {
+    "label": "projekte",
+    "heading": "Meine Projekte",
+    "subtitle": "{{count}} Projekte",
+    "subtitle_one": "{{count}} Projekt",
+    "subtitle_other": "{{count}} Projekte",
+    "viewProject": "$ ./view-project"
+  },
+  "timeline": {
+    "label": "lebenslauf",
+    "heading": "Werdegang",
+    "subtitle": "Ausbildung · Studium · Berufserfahrung"
+  },
+  "project": {
+    "breadcrumb": "~/projekte",
+    "descriptionLabel": "beschreibung",
+    "screenshotsLabel": "screenshots",
+    "github": "GitHub →",
+    "website": "Webseite →"
+  }
+}

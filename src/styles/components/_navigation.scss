@@ -1,147 +1,111 @@
-@use "../_tools.scss" as tools;
-
-// navigation fixed on wide screens
-.navigation {
-  // @media (min-width: 45em) {
-  //   position: sticky;
-  //   top: 0;
-  //   z-index: 10;
-  // }
-  top: 0;
-  z-index: 10;
-}
-
-.navigation {
-  background: var(--background-color-two);
-  padding-left: var(--padding);
-  padding-right: var(--padding);
-  // width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
+.header {
   position: fixed;
-}
-
-// a:-webkit-any-link {
-//   color: var(--black-color);
-// }
-
-.navigation__ul {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-}
-
-.navigation__ul li:not(:first-child) > .navigation__link {
-  padding: var(--padding);
-  margin: var(--margin);
-}
-
-.navigation__ul li:first-child {
-  margin: var(--margin);
-}
-
-.navigation__image {
-  width: 100%;
-  height: auto;
-  max-height: 3em;
-  object-fit: contain;
-}
-
-.navigation__icon {
-  cursor: pointer;
-  display: none;
-  float: right;
-  margin: var(--margin);
-  color: var(--white-color);
-  z-index: 20;
-  position: sticky;
   top: 0;
-  background-color: var(--black-color);
-  border-radius: var(--border-radius);
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: rgba(6, 6, 18, 0.92);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--page-padding);
+  z-index: 100;
 }
 
-.navigation__link {
-  cursor: pointer;
-  color: var(--white-color);
+.header__logo {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 2px;
 }
 
-@media (max-width: 1000px) {
-  .isClosed.navigation {
-    // display: none;
+.header__logo-prompt {
+  color: var(--text3);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text2);
   }
 
-  .navigation__icon {
-    display: block;
-    z-index: 20;
+  &--active {
+    color: var(--text);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+}
+
+.header__lang {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  border: 1px solid var(--border);
+  color: var(--text3);
+  padding: 4px 10px;
+  letter-spacing: 2px;
+  background: transparent;
+  transition: border-color 0.2s, color 0.2s;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.header__hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text2);
+  padding: 4px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
   }
 
-  .isOpen.navigation {
-    padding: var(--padding);
+  .header__hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  // .isOpen.navigation > .navigation__ul {
-    .navigation__ul {
-    display: grid;
-    grid-template-columns: 1fr; /* One item per row */
-    gap: calc(var(--margin) * 2); /* Adjust the gap between items as needed */
-    justify-items: center;
-    z-index: 10;
-  }
+  .header__nav {
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: rgba(6, 6, 18, 0.97);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 20px;
 
-
-  // animation when opening and closing the navigation
-  @keyframes slideIn {
-    0% {
-      transform: translateY(-100%);
+    &--open {
+      display: flex;
     }
-    100% {
-      transform: translateY(0);
-      z-index: 10;
-    }
-  }
-  
-  @keyframes slideOut {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(-100%);
-      z-index: 10;
-    }
   }
 
-  .navigation.isOpen {
-    animation: slideIn 0.5s ease-in-out ; /* Use forwards to keep the final state */
-  }
-  
-  .navigation.isClosed {
-    animation: slideOut 0.5s ease-in-out forwards; /* Use forwards to keep the final state */
-  }
-
-  // animation on button clicked
-  .navigation__icon {
-    scale: 1;
-  }
-
-  .navigation__icon:hover {
-    scale: 0.8;
-    transition: scale 0.2s;
+  .header__link {
+    font-size: 14px;
   }
 }
-
-
-.navigation__li {
-  scale: 1;
-  transition: scale 0.2s;
-}
-
-.navigation__li:hover {
-  scale: 0.9;
-}
-
