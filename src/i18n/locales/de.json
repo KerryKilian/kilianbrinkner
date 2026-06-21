@@ -12,7 +12,7 @@
     "scroll": "scroll",
     "aboutLabel": "über mich",
     "aboutHeading": "Entwickler mit\nLeidenschaft",
-    "aboutText": "Ich bin 23 Jahre alt und lebe in Berlin. Ich habe bereits einen Bachelor in Geoinformation mit dem Schwerpunkt Geoinformatik. Während des Studiums habe ich gemerkt, dass mir die Programmierung viel Spaß macht. Mein Fokus lag schon immer auf der App- und Webentwicklung. Ab Winter 2022 habe ich Module aus dem Bachelor Medieninformatik belegt, damit ich nun seit Winter 2023 meinen Master in Medieninformatik belegen kann."
+    "aboutText": "Ich bin {{age}} Jahre alt und lebe in Berlin. Ich habe einen Bachelor in Geoinformatik und anschließend einen Master in Medieninformatik gemacht. In meiner Freizeit arbeite ich an Projekten, um meine Fähigkeiten zu verbessern und neue Technologien zu erlernen. Meine Schwerpunkte liegen in der Web- und Android-Entwicklung, im Studium konnte ich aber auch wertvolle Einblicke in Machine Learning und andere Bereiche wie Requirements Engineering gewinnen."
   },
   "projects": {
     "label": "projekte",

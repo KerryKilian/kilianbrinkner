@@ -1,8 +1,10 @@
-import { timelineData } from "../data/Timeline";
+import { useTranslation } from "react-i18next";
+import { getTimelineData } from "../data/Timeline";
 import { TimelineEntry } from "./TimelineEntry";
 
 export function VerticalTimeline() {
-  const reversed = [...timelineData].reverse();
+  const { i18n } = useTranslation();
+  const reversed = [...getTimelineData(i18n.language)].reverse();
 
   return (
     <div className="vertical-timeline">

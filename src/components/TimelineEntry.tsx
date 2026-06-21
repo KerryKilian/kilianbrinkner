@@ -30,18 +30,20 @@ export function TimelineEntry({
       ref={ref}
       className={`timeline-entry ${isVisible ? "timeline-entry--visible" : ""}`}
     >
-      <div
-        className={`timeline-entry__dot ${
-          isRecent ? "timeline-entry__dot--recent" : ""
-        }`}
-      />
-      <div className="timeline-entry__date">{title}</div>
-      <div
-        className={`timeline-entry__card ${
-          isRecent ? "timeline-entry__card--recent" : ""
-        }`}
-      >
-        <div className="timeline-entry__header">
+      <div className="timeline-entry__track">
+        <div
+          className={`timeline-entry__dot ${
+            isRecent ? "timeline-entry__dot--recent" : ""
+          }`}
+        />
+      </div>
+      <div className="timeline-entry__body">
+        <div className="timeline-entry__date">{title}</div>
+        <div
+          className={`timeline-entry__card ${
+            isRecent ? "timeline-entry__card--recent" : ""
+          }`}
+        >
           <div className="timeline-entry__logo">
             <img
               src={logo}
@@ -51,12 +53,14 @@ export function TimelineEntry({
               }}
             />
           </div>
-          <div>
-            <div className="timeline-entry__title">{cardTitle}</div>
-            <div className="timeline-entry__subtitle">{cardSubtitle}</div>
+          <div className="timeline-entry__content">
+            <div className="timeline-entry__header">
+              <div className="timeline-entry__title">{cardTitle}</div>
+              <div className="timeline-entry__subtitle">{cardSubtitle}</div>
+            </div>
+            <p className="timeline-entry__text">{cardDetailedText}</p>
           </div>
         </div>
-        <p className="timeline-entry__text">{cardDetailedText}</p>
       </div>
     </div>
   );

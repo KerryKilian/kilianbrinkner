@@ -1,17 +1,28 @@
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   margin-bottom: 40px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .gallery__item {
   background: var(--bg2);
   border: 1px solid var(--border);
   overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
 
-  &--wide {
-    grid-column: 1 / -1;
+  &:hover {
+    border-color: rgba(0, 255, 170, 0.4);
+
+    .gallery__img {
+      opacity: 1;
+      transform: scale(1.03);
+    }
   }
 }
 
@@ -19,27 +30,96 @@
   width: 100%;
   display: block;
   object-fit: cover;
-  aspect-ratio: 16 / 9;
-  opacity: 0.85;
-  transition: opacity 0.3s;
-
-  &:hover { opacity: 1; }
+  aspect-ratio: 1 / 1;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .gallery__caption {
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--text3);
-  padding: 10px 14px;
+  padding: 8px 12px;
   letter-spacing: 0.5px;
+  line-height: 1.4;
 }
 
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+// ---- Lightbox ----
 
-  .gallery__item--wide {
-    grid-column: 1;
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(6, 6, 18, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  cursor: pointer;
+  animation: lightbox-bg-in 0.25s ease forwards;
+}
+
+@keyframes lightbox-bg-in {
+  from { background: rgba(6, 6, 18, 0); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); }
+  to   { background: rgba(6, 6, 18, 0.88); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+}
+
+.lightbox--closing {
+  animation: lightbox-bg-out 0.38s ease forwards;
+}
+
+@keyframes lightbox-bg-out {
+  from { background: rgba(6, 6, 18, 0.88); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+  to   { background: rgba(6, 6, 18, 0); backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); }
+}
+
+.lightbox__close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text3);
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+  z-index: 1001;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
   }
+}
+
+.lightbox__inner {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox__img {
+  display: block;
+  max-width: 90vw;
+  max-height: 82vh;
+  object-fit: contain;
+  will-change: transform, clip-path;
+}
+
+.lightbox__caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  text-align: center;
 }

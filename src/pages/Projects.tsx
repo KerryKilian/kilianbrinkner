@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "../components/ProjectCard";
-import { projectsData } from "../data/Projects";
+import { getProjectsData } from "../data/Projects";
 
 export default function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const projects = getProjectsData(i18n.language);
 
   useEffect(() => {
     document.title = t("projects.heading");
@@ -16,11 +17,11 @@ export default function Projects() {
         <p className="section-label">{t("projects.label")}</p>
         <h1 className="page-header__title">{t("projects.heading")}</h1>
         <p className="page-header__subtitle">
-          {t("projects.subtitle", { count: projectsData.length })}
+          {t("projects.subtitle", { count: projects.length })}
         </p>
       </div>
       <div className="cards-grid">
-        {projectsData.map((project) => (
+        {projects.map((project) => (
           <ProjectCard
             key={project.title}
             title={project.title}

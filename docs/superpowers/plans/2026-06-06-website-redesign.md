@@ -400,7 +400,7 @@ Expected: no type errors.
     "scroll": "scroll",
     "aboutLabel": "about me",
     "aboutHeading": "Developer with\nPassion",
-    "aboutText": "I am 23 years old and live in Berlin. I hold a Bachelor's degree in Geoinformation with a focus on Geoinformatics. During my studies I discovered my passion for programming, especially app and web development. Since winter 2023 I have been studying for my Master's in Media Informatics at the Berliner Hochschule für Technik."
+    "aboutText": "I am 23 years old and live in Berlin. I already hold a bachelor's degree in Geoinformation with a specialization in Geoinformatics. During my studies, I discovered that I really enjoy programming. My focus has always been on app and web development. Starting in the winter of 2022, I took modules from the Media Informatics bachelor's program, enabling me to begin my master's degree in Media Informatics in the winter of 2023."
   },
   "projects": {
     "label": "projects",
