@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getProjectsData } from "../data/Projects";
@@ -24,12 +24,44 @@ function Project() {
     document.title = title ?? t("projects.heading");
   }, [title, t]);
 
+  const closeLightbox = useCallback(() => {
+    if (!lightbox || isClosing || !lightboxImgRef.current) return;
+
+    const img = lightboxImgRef.current;
+    const { rect } = lightbox;
+
+    const finalRect = img.getBoundingClientRect();
+    const fw = finalRect.width;
+    const fh = finalRect.height;
+
+    const clipX = fw > fh ? `${((fw - fh) / (2 * fw)) * 100}%` : "0%";
+    const clipY = fh > fw ? `${((fh - fw) / (2 * fh)) * 100}%` : "0%";
+    const squareClip = `inset(${clipY} ${clipX})`;
+
+    const squareSize = Math.min(fw, fh);
+    const scale = rect.width / squareSize;
+
+    const dx = (rect.left + rect.width / 2) - (finalRect.left + fw / 2);
+    const dy = (rect.top + rect.height / 2) - (finalRect.top + fh / 2);
+
+    setIsClosing(true);
+
+    img.style.transition = `transform ${ANIM_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1), clip-path ${ANIM_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`;
+    img.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+    img.style.clipPath = squareClip;
+
+    setTimeout(() => {
+      setLightbox(null);
+      setIsClosing(false);
+    }, ANIM_DURATION);
+  }, [lightbox, isClosing]);
+
   useEffect(() => {
     if (!lightbox) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") closeLightbox(); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [lightbox, isClosing]);
+  }, [lightbox, isClosing, closeLightbox]);
 
   // Open: morph from thumbnail to center
   useEffect(() => {
@@ -64,39 +96,7 @@ function Project() {
         img.style.clipPath = "inset(0%)";
       });
     });
-  }, [lightbox]);
-
-  const closeLightbox = () => {
-    if (!lightbox || isClosing || !lightboxImgRef.current) return;
-
-    const img = lightboxImgRef.current;
-    const { rect } = lightbox;
-
-    const finalRect = img.getBoundingClientRect();
-    const fw = finalRect.width;
-    const fh = finalRect.height;
-
-    const clipX = fw > fh ? `${((fw - fh) / (2 * fw)) * 100}%` : "0%";
-    const clipY = fh > fw ? `${((fh - fw) / (2 * fh)) * 100}%` : "0%";
-    const squareClip = `inset(${clipY} ${clipX})`;
-
-    const squareSize = Math.min(fw, fh);
-    const scale = rect.width / squareSize;
-
-    const dx = (rect.left + rect.width / 2) - (finalRect.left + fw / 2);
-    const dy = (rect.top + rect.height / 2) - (finalRect.top + fh / 2);
-
-    setIsClosing(true);
-
-    img.style.transition = `transform ${ANIM_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1), clip-path ${ANIM_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`;
-    img.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
-    img.style.clipPath = squareClip;
-
-    setTimeout(() => {
-      setLightbox(null);
-      setIsClosing(false);
-    }, ANIM_DURATION);
-  };
+  }, [lightbox, isClosing]);
 
   const openLightbox = (e: React.MouseEvent, src: string, caption: string) => {
     const imgEl = (e.currentTarget as HTMLElement).querySelector("img");
